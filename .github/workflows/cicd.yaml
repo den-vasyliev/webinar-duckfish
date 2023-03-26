@@ -1,3 +1,32 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@den-vasyliev 
+den-vasyliev
+/
+webinar-duckfish
+Public
+forked from duckfish21/webinar
+Fork your own copy of den-vasyliev/webinar-duckfish
+Code
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+Build and push docker image
+fix cicd #3
+Jobs
+Run details
+Workflow file for this run
+.github/workflows/cicd.yaml at dd940b8
 # job build and push to ghcr.io
 name: Build and push docker image
 on:
@@ -25,5 +54,6 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ghcr.io/duckfish21/webinar:latest
+          tags: ghcr.io/${{github.repository}}:${{ github.sha }}
 
+fix cicd · den-vasyliev/webinar-duckfish@dd940b8
